@@ -6,9 +6,9 @@
 ```shell
 git clone https://github.com/blue-troy/blurfilter.git
 cd blurfilter
-python3 setup.py install
+python setup.py install
 ```
 ## 运行
 ```shell
-python3 blurfilter
+python blurfilter
 ```
