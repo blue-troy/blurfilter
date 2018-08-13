@@ -6,7 +6,7 @@
 ```shell
 git clone https://github.com/blue-troy/blurfilter.git
 cd blurfilter
-pip install opencv-python
+python setup.py install
 ```
 ## 运行
 ```shell
