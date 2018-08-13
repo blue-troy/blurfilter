@@ -10,5 +10,5 @@ python setup.py install
 ```
 ## 运行
 ```shell
-python blurfilter
+python blurfilter.py
 ```
