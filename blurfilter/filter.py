@@ -40,13 +40,15 @@ def is_image(img_path):
     return img_path.endswith(".jpg") or img_path.endswith(".png")
 
 
-DIR = input("请输入文件夹路径：")
-THRESHOLD = get_threshold()
-blur_path = handle_blur_dir()
+if __name__ == '__main__':
 
-for (root, dirs, files) in os.walk(DIR):
-    for file in files:
-        img_path = os.path.join(root, file)
-        if is_image(img_path):
-            if get_blur_var(img_path) < THRESHOLD:
-                move_blur_img(img_path)
+    DIR = input("请输入文件夹路径：")
+    THRESHOLD = get_threshold()
+    blur_path = handle_blur_dir()
+
+    for (root, dirs, files) in os.walk(DIR):
+        for file in files:
+            img_path = os.path.join(root, file)
+            if is_image(img_path):
+                if get_blur_var(img_path) < THRESHOLD:
+                    move_blur_img(img_path)
