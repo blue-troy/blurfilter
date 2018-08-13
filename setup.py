@@ -6,6 +6,6 @@ setup(
     packages=['blurfilter'],
     install_requires=[  # 依赖列表
         'shutil',
-        'cv2'
+        'opencv-python'
     ]
 )
