@@ -19,8 +19,8 @@ def move_blur_img(img_path):
             print("文件移动异常\n", BaseException)
 
 
-def handle_blur_dir():
-    blur_path = DIR + "/blur"
+def handle_blur_dir(threshold):
+    blur_path = DIR + "/blur" + str(threshold)
     if not os.path.exists(blur_path):
         os.mkdir(blur_path)
     return blur_path
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     DIR = input("请输入文件夹路径：")
     THRESHOLD = get_threshold()
-    blur_path = handle_blur_dir()
+    blur_path = handle_blur_dir(THRESHOLD)
 
     for (root, dirs, files) in os.walk(DIR):
         for file in files:
